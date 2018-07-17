@@ -21,21 +21,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b766838ae084fdc1b42a28680cc33500dfe06856
 # Fonctionnalité
 - IA vs Joueur
 - Joueur vs Joueur
 - IA vs IA
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> b766838ae084fdc1b42a28680cc33500dfe06856
 # Formateur
 - NomDuFormateur
 
 # Formation
->>>>>>> master

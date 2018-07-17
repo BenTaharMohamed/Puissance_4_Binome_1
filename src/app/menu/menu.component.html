@@ -1,0 +1,27 @@
+<div id="menu_button" (click)="menu_open()"><i class="material-icons">{{menu_button}}</i></div>
+<div id="menu_nav" [style.display]="menu_visible==true?'block':'none'">
+  <div id="menu_table">
+      <div class="menu_header">Activité</div>
+    <ul>
+      <li ><div [ngStyle]="{'text-align':'center'}" [ngClass]="activeClass?'active':''" (click)="menu_output('person')"><i class="material-icons">
+          person
+          </i></div>Profil</li>
+      <li ><div [ngStyle]="{'text-align':'center'}" [ngClass]="activeClass?'active':''" (click)="menu_output('exercices')"><i class="material-icons">
+          directions_run
+          </i></div>A l'action</li>
+      <li ><div [ngStyle]="{'text-align':'center'}" [ngClass]="activeClass?'active':''" (click)="menu_output('regime')"><i class="material-icons">
+          fastfood
+          </i></div>Regime</li>
+      <li ><div [ngStyle]="{'text-align':'center'}" [ngClass]="activeClass?'active':''" (click)="menu_output('reglages')"><i class="material-icons">
+          build
+          </i></div>Reglages</li>
+    </ul>
+    <div class="menu_header">Actions</div>
+    <app-menu-submenu [menuText]="menu_text"></app-menu-submenu>
+  </div>
+</div>
+
+<!-- Progress,Programma,Isklyuchenia -->
+<!-- Debutant , prodvinutiy,PRO, custom -->
+<!-- pohudenie nabor -->
+<!-- account,theme,Me,norifications -->

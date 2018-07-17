@@ -1,0 +1,127 @@
+/* Menu css */
+#menu_nav{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    margin:0 auto;
+    z-index: 3;
+    overflow: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style:none;
+}
+.menu_header{
+    background: rgba(150,150,150,.5);
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+}
+#menu_table{
+    width: 98%;
+    height: auto;
+    background: #FFF;
+    border-radius: 0.3rem;
+    position: absolute;
+    bottom: 75px;
+    left: 1%;
+    animation: menu  0.3s linear ;
+    ul{
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        padding: 0;
+        margin: 1rem 0;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 0.75rem;
+        }
+        li:nth-child(1){
+            color: #448AFF;
+        }
+        li:nth-child(2){
+            color: #673AB7;
+        }
+        li:nth-child(3){
+            color:#43A047;
+        }
+        li:nth-child(4){
+            color:#424242
+        }
+        li div{
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li div:hover,
+        li div.active{
+            width: 3rem;
+            height: 3rem;
+        }
+
+    // Hovers
+    li:nth-child(1) div:hover,
+    li:nth-child(1) div.active{
+        background: #448AFF;
+        color: #FFF;
+    }
+    li:nth-child(2) div:hover,
+    li:nth-child(2) div.active{
+        background: #673AB7;
+        color: #FFF;
+    }
+    li:nth-child(3) div:hover,
+    li:nth-child(3) div.active{
+        background: #43A047;
+        color: #fff;
+    }
+    li:nth-child(4) div:hover,
+    li:nth-child(4) div.active{
+        background: #424242;
+        color: #FFF;
+    }
+    }
+}
+#menu_button{
+    z-index: 3;
+    width:50px;
+    height: 50px;
+    display:flex;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 25px);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px black;
+    background: linear-gradient(135deg, rgba(128,155,255,1) 0%, rgba(149,28,156,1) 100%);
+    cursor: pointer;
+    color: rgba(255,255,255,.75);
+    :hover{
+        color: #fff;
+    }
+}
+
+#menu_text{
+    padding: 1rem;
+}
+
+// Animations
+@keyframes menu{
+    0%{transform: rotate(180deg) translateY(-305px) translateX(0)}
+    25%{transform: rotate(135deg) translateY(-260px) translateX(100px)}
+    50%{transform: rotate(90deg) translateY(-153px) translateX(155px)}
+    66%{transform: rotate(70deg) translateY(-100px) translateX(140px)}
+    75%{transform: rotate(45deg) translateY(-45px) translateX(110px)}
+    85%{transform:rotate(33deg) translateY(-25px) translateX(85px)}
+    100%{transform: rotate(0deg) translateX(0) translateY(0px)}
+}

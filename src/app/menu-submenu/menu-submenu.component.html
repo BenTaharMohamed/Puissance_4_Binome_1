@@ -1,0 +1,23 @@
+<ul *ngIf="menuText=='person'">
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">donut_large</i></div>Progress</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">vertical_split</i></div>Programme</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">delete_forever</i></div>Exceptions</li>
+</ul>
+
+<ul *ngIf="menuText=='exercices'">
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">exposure_zero</i></div>Debutant</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">exposure_plus_1</i></div>Avancé</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">exposure_plus_2</i></div>PRO</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">fitness_center</i></div>Custom</li>
+</ul>
+
+<ul *ngIf="menuText=='regime'">
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">radio_button_unchecked</i></div>Perte de poids</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">radio_button_checked</i></div>Gagner la masse</li>
+</ul>
+
+<ul *ngIf="menuText=='reglages'">
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">person</i></div>Account</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">brush</i></div>Theme</li>
+  <li><div [ngStyle]="{'text-align':'center'}"><i class="material-icons">priority_high</i></div>Notifications</li>
+</ul>

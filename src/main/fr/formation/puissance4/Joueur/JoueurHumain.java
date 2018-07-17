@@ -13,8 +13,14 @@ public class JoueurHumain extends Joueur{
     @Override
     public String envoyer() {
         Scanner scan=new Scanner(System.in);
-        System.out.println("Saisir la colonne");
+        System.out.println("Saisir la colonne : (1-6)");
         int colonne=scan.nextInt();
+        for(int i=0;i<6;i++){
+            if(board.getJetons()[i][colonne-1]==null){
+                board.getJetons()[i][colonne-1].setColor(color);
+                break;
+            }
+        }
         if (Color.RED.equals(color))
             return colonne+",RED";
         else
@@ -24,8 +30,7 @@ public class JoueurHumain extends Joueur{
     @Override
     public void recevoir(String messageRecu) {
         String [] strings = messageRecu.split(",");
-        int colonne = Integer.parseInt(strings[1]);
-//        A modifier!
+        int colonne = Integer.parseInt(strings[0]);
 //        board.getJetons()[ligne][colonne].setColor(Color.valueOf(strings[2]));
     }
 

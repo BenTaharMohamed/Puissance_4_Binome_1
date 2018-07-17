@@ -3,6 +3,8 @@ package fr.formation.puissance4.Joueur;
 import fr.formation.puissance4.Board.Board;
 import javafx.scene.paint.Color;
 
+import java.util.Scanner;
+
 public class JoueurHumain extends Joueur{
         public JoueurHumain(Color color, Board board) {
             super(color, board);
@@ -10,10 +12,15 @@ public class JoueurHumain extends Joueur{
 
     @Override
     public String envoyer() {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Saisir la ligne");
+        int ligne=scan.nextInt();
+        System.out.println("Saisir la colonne");
+        int colonne=scan.nextInt();
         if (Color.RED.equals(color))
-            return "4,4,RED";
+            return ligne+","+colonne+",RED";
         else
-            return "4,4,YELLOW";
+            return ligne+","+colonne+",YELLOW";
     }
 
     @Override

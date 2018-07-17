@@ -19,7 +19,7 @@ public class JoueurHumain extends Joueur{
             if(board.getJetons()[i][colonne-1]==null){
                 board.getJetons()[i][colonne-1].setColor(color);
                 break;
-            }
+            }//faire une protection pour les entrees claviers fausses
         }
         if (Color.RED.equals(color))
             return colonne+",RED";

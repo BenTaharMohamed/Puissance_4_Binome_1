@@ -1,7 +1,7 @@
 # License
 MIT License
 
-Copyright (c) 2018 VotreNomDequipe
+Copyright (c) 2018 EquipeEnMousse
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,3 +25,9 @@ SOFTWARE.
 - IA vs Joueur
 - Joueur vs Joueur
 - IA vs IA
+
+# Formateur
+- NomDuFormateur
+
+# Formation
+>>>>>>> master

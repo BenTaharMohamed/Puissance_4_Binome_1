@@ -12,4 +12,13 @@ public class Board {
     public Jeton[][] getJetons() {
         return jetons;
     }
+
+    public int GrilleVide[][] = new int [6][7];
+
+    public void remplirGrille(){
+
+    }
+    public void affichageGrile(){
+
+    }
 }

@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # Fonctionnalité
-- IA vs Joueur
-- Joueur vs Joueur
+- IA vs fr.formation.puissance4.Joueur.Joueur
+- fr.formation.puissance4.Joueur.Joueur vs fr.formation.puissance4.Joueur.Joueur
 - IA vs IA
 
 # Formateur

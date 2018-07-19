@@ -32,7 +32,6 @@ public class Puissance4 extends Application {
         primaryStage.setResizable(true);
 
         final Button addCellButton = new Button("Add Grids");
-
         Scene scene = new Scene(root, 900, 900, true);
         scene.setFill(Color.BLACK);
         scene.getStylesheets().add("net/glyphsoft/styles.css");

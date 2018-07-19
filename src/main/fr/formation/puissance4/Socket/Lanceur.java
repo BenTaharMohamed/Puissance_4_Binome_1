@@ -1,6 +1,6 @@
-package puissance4.Socket;
+package fr.formation.puissance4.Socket;
 
-import puissance4.Joueur.Joueur;
+import fr.formation.puissance4.Joueur.Joueur;
 
 import java.io.BufferedReader;
 import java.io.IOException;

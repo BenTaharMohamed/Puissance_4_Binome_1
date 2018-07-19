@@ -1,6 +1,6 @@
 package puissance4.Board;
 
-import puissance4.Piece.Jeton;
+import fr.formation.puissance4.Piece.Jeton;
 
 public class Board {
     private Jeton[][] jetons;

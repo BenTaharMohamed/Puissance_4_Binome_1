@@ -1,4 +1,4 @@
-package puissance4.Joueur;
+package fr.formation.puissance4.Joueur;
 
 import puissance4.Board.Board;
 import javafx.scene.paint.Color;

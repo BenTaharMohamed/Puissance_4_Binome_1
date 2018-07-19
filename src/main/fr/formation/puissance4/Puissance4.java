@@ -1,4 +1,4 @@
-package puissance4;
+package fr.formation.puissance4;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -30,8 +30,6 @@ public class Puissance4 extends Application {
         final GridPane gridpane = new GridPane();
         primaryStage.setTitle("Puissance 4");
         primaryStage.setResizable(true);
-
-        final Button addCellButton = new Button("Add Grids");
 
         Scene scene = new Scene(root, 900, 900, true);
         scene.setFill(Color.BLACK);

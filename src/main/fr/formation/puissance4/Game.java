@@ -1,10 +1,10 @@
-package puissance4;
+package fr.formation.puissance4;
 
-import puissance4.Joueur.JoueurHumain;
-import puissance4.Socket.Client;
-import puissance4.Socket.Serveur;
+import fr.formation.puissance4.Joueur.JoueurHumain;
+import fr.formation.puissance4.Socket.Client;
+import fr.formation.puissance4.Socket.Serveur;
 import puissance4.Board.Board;
-import puissance4.Piece.Jeton;
+import fr.formation.puissance4.Piece.Jeton;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 

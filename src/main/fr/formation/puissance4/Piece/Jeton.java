@@ -1,4 +1,4 @@
-package puissance4.Piece;
+package fr.formation.puissance4.Piece;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;

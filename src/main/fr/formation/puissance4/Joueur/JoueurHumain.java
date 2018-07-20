@@ -80,12 +80,8 @@ public class JoueurHumain extends Joueur {
         return false;
     }
 
-    private boolean isWinner(Map<Integer,Integer> position) {
-        System.out.println(position.size());
-        if (position.size()==4) {
-            for(Map.Entry<Integer,Integer> pos : position.entrySet()){
-                board.getJetons()[pos.getKey()][pos.getValue()].setColor(Color.GREEN);
-            }
+    private boolean isWinner(int val) {
+        if (val==4) {
             System.out.println("Gagné!");
             return true;
         }
@@ -117,13 +113,13 @@ public class JoueurHumain extends Joueur {
 
     private boolean horizontalTest(int val) {
         String myColor = getColorMe();
-        Map<Integer,Integer> me=new HashMap<>();
+        int me=0;
         for (int i = board.getJetons().length - 1; i >= val; i--) {
-            me = new HashMap<>();
+            me = 0;
             for (int j = 0; j < 7; j++) {
                 if (isWinner(me)) return true;
-                if (board.getJetons()[i][j].getColor() == Color.valueOf(myColor)) me.put(i,j);
-                else me = new HashMap<>();
+                if (board.getJetons()[i][j].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         return false;
@@ -131,13 +127,13 @@ public class JoueurHumain extends Joueur {
 
     private boolean verticalTest(int val) {
         String myColor = getColorMe();
-        Map<Integer,Integer> me=new HashMap<>();
+        int me=0;
         for (int j = 0; j < 7; j++) {
-            me = new HashMap<>();
+            me = 0;
             for (int i = board.getJetons().length - 1; i < val; i--) {
                 if (isWinner(me)) return true;
-                if (board.getJetons()[i][j].getColor() == Color.valueOf(myColor)) me.put(i,j);
-                else me = new HashMap<>();
+                if (board.getJetons()[i][j].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         return false;
@@ -146,39 +142,39 @@ public class JoueurHumain extends Joueur {
     private boolean diagonalTest() {
         String myColor = getColorMe();
         for (int i = 3; i <= 5; i++) {
-        Map<Integer,Integer> me=new HashMap<>();
-            me = new HashMap<>();
+        int me=0;
+            me = 0;
             for (int j = 0, k = i; j <= i; j++, k--) {
                 if(isWinner(me)) return true;
-                if (board.getJetons()[k][j].getColor() == Color.valueOf(myColor)) me.put(k,j);
-                else me = new HashMap<>();
+                if (board.getJetons()[k][j].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         //        Diagonal test mode : / after 5(right half)
         for (int j = 1; j <= 3; j++) {
-            Map<Integer,Integer> me=new HashMap<>();
+            int me=0;
             for (int i = 5, k = j; k <= 6; i--, k++) {
                 if (isWinner(me)) return true;
-                if (board.getJetons()[i][k].getColor() == Color.valueOf(myColor)) me.put(i,k);
-                else me = new HashMap<>();
+                if (board.getJetons()[i][k].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         //        Diagonal test mode : \ until 5(left half)
         for (int i = 2; i >= 0; i--) {
-            Map<Integer,Integer> me=new HashMap<>();
+            int me=0;
             for (int j = 0, k = i; k <= 5; j++, k++) {
                 if (isWinner(me)) return true;
-                if (board.getJetons()[k][j].getColor() == Color.valueOf(myColor)) me.put(k,j);
-                else me = new HashMap<>();
+                if (board.getJetons()[k][j].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         //        Diagonal test mode : \ after 5(right half)
         for (int cpt = 0, j = 1; cpt < 3; cpt++, j++) {
-            Map<Integer,Integer> me=new HashMap<>();
+            int me=0;
             for (int i = 0, k = j; k <= 6; i++, k++) {
                 if (isWinner(me)) return true;
-                if (board.getJetons()[i][k].getColor() == Color.valueOf(myColor)) me.put(i,k);
-                else me = new HashMap<>();
+                if (board.getJetons()[i][k].getColor() == Color.valueOf(myColor)) me++;
+                else me = 0;
             }
         }
         return false;

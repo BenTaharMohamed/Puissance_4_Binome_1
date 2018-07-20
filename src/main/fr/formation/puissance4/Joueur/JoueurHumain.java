@@ -26,16 +26,10 @@ public class JoueurHumain extends Joueur {
             System.out.println("Saisir la colonne : (1-7)");
             int colonne = scan.nextInt();
             int ligne = 0;
-            boolean hasPlace = false;
-            while (colonne < 1 || colonne > 7 && !hasPlace) {
-                System.out.println("Faut saisir un nombre entre 1 et 6 (1,2,3,4,5,6,7)");
+            while (colonne < 1 || colonne > 7 || !lastLineVide(colonne)) {
+                System.out.println("Faut saisir un nombre entre 1 et 7 (1,2,3,4,5,6,7)");
                 colonne = scan.nextInt();
-                for (int i = 5; i >= 0; i--) {
-                    if (board.getJetons()[i][colonne - 1].getColor() == Color.TRANSPARENT) {
-                        hasPlace = true;
-                        break;
-                    }
-                }
+                int colonneRE=colonne-1;
             }
             colonne--;
             for (int i = 5; i >= 0; i--) {
@@ -50,6 +44,12 @@ public class JoueurHumain extends Joueur {
             return ligne + "," + colonne + "," + myColor;
 
         }
+    }
+
+    private boolean lastLineVide(int x){
+        if(board.getJetons()[0][x-1].getColor() == Color.TRANSPARENT) return true;
+        System.out.println("Plus de place pour la colonne "+(x-1));
+        return  false;
     }
 
     @Override
